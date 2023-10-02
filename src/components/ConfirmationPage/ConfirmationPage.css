@@ -1,0 +1,13 @@
+.confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.confirm-container h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+

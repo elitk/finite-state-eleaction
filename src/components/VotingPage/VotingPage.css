@@ -1,0 +1,86 @@
+.vote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vote-container h1 {
+  text-align: center;
+  word-wrap: break-word; /* Breaks the line at appropriate breakpoints */
+}
+
+.ballot-box {
+  width: 200px;
+  height: 250px;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 10%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.envelope-slot {
+  width: 150px;
+  height: 10px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vote-text {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+.button-container {
+  display: flex;
+}
+@keyframes slideIn {
+  0% {
+    top: -40px;
+    opacity: 0;
+  }
+  50% {
+    top: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 30px;
+    opacity: 0;
+  }
+}
+@keyframes example {
+  0% {
+    top: -40px;
+    opacity: 0;
+  }
+  25% {
+    top: 30px;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.envelope {
+  width: 140px;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  top: -40px;
+  left: 30px; /* adjust as necessary to center it */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: rotate(-90deg);
+  opacity: 0;
+  animation: slideIn 1.5s forwards;
+}
