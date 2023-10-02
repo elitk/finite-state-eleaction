@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/finite-state-eleaction/static/css/main.87ac8711.css",
+    "main.js": "/finite-state-eleaction/static/js/main.2ade6228.js",
+    "static/js/787.7fa006c3.chunk.js": "/finite-state-eleaction/static/js/787.7fa006c3.chunk.js",
+    "index.html": "/finite-state-eleaction/index.html",
+    "main.87ac8711.css.map": "/finite-state-eleaction/static/css/main.87ac8711.css.map",
+    "main.2ade6228.js.map": "/finite-state-eleaction/static/js/main.2ade6228.js.map",
+    "787.7fa006c3.chunk.js.map": "/finite-state-eleaction/static/js/787.7fa006c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87ac8711.css",
+    "static/js/main.2ade6228.js"
+  ]
+}
