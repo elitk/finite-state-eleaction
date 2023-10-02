@@ -66,9 +66,7 @@ function VotingPage() {
           </option>
         ))}
       </select>
-
       <Button onClick={() => handleVote()}>Vote</Button>
-
       <Modal
         show={showModal}
         onClose={() => setShowModal(false)}
@@ -77,10 +75,9 @@ function VotingPage() {
       >
         <p>You voted for: {selectedCandidate}</p>
       </Modal>
-
       <div className="ballot-box">
         <div className="envelope-slot"></div>
-        {hasVoted && <div className="envelope"></div>}{' '}
+        {hasVoted && <div className="envelope"></div>}
       </div>
     </div>
   );
