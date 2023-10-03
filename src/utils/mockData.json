@@ -1,42 +1,42 @@
 {
   "cities": [
     {
-      "id": "1",
+      "id": "jerusalem_id",
       "name": "Jerusalem",
       "region": "Jerusalem District",
       "population": "900,000",
       "area": "125.1 sq km"
     },
     {
-      "id": "2",
+      "id": "telAviv_id",
       "name": "Tel Aviv",
       "region": "Tel Aviv District",
       "population": "460,000",
       "area": "51.4 sq km"
     },
     {
-      "id": "3",
+      "id": "haifa_id",
       "name": "Haifa",
       "region": "Haifa District",
       "population": "280,000",
       "area": "63.66 sq km"
     },
     {
-      "id": "4",
+      "id": "rishonLeZion_id",
       "name": "Rishon LeZion",
       "region": "Central District",
       "population": "250,000",
       "area": "59 sq km"
     },
     {
-      "id": "5",
+      "id": "petahTikva_id",
       "name": "Petah Tikva",
       "region": "Central District",
       "population": "240,000",
       "area": "35.9 sq km"
     },
     {
-      "id": "6",
+      "id": "ashdod_id",
       "name": "Ashdod",
       "region": "Southern District",
       "population": "225,000",
@@ -44,266 +44,291 @@
     }
   ],
 
-  "candidates": {
-    "Jerusalem": [
-      {
-        "id": "101",
-        "name": "Eli Cohen",
-        "party": "Unity Party",
-        "background": "Former city council member"
-      },
-      {
-        "id": "102",
-        "name": "Miri Regev",
-        "party": "Peace & Progress Party",
-        "background": "Activist and community organizer"
-      },
-      {
-        "id": "103",
-        "name": "David Levy",
-        "party": "Future Forward Party",
-        "background": "Business owner and philanthropist"
-      }
-    ],
-    "Tel Aviv": [
-      {
-        "id": "201",
-        "name": "Yael Dayan",
-        "party": "Green City Party",
-        "background": "Environmental activist"
-      },
-      {
-        "id": "202",
-        "name": "Ofer Berkovich",
-        "party": "Urban Renewal Party",
-        "background": "Real estate developer"
-      },
-      {
-        "id": "203",
-        "name": "Hila Vazan",
-        "party": "Unity Party",
-        "background": "Lawyer and human rights advocate"
-      },
-      {
-        "id": "204",
-        "name": "Noam Shalit",
-        "party": "People's Party",
-        "background": "Journalist and author"
-      }
-    ],
-    "Haifa": [
-      {
-        "id": "301",
-        "name": "Ruth Wasserman Lande",
-        "party": "Labor Party",
-        "background": "Former diplomat and educator"
-      },
-      {
-        "id": "302",
-        "name": "Shlomo Lahiani",
-        "party": "Future Forward Party",
-        "background": "Entrepreneur and business consultant"
-      },
-      {
-        "id": "303",
-        "name": "Nitzan Horowitz",
-        "party": "Green City Party",
-        "background": "Environmental engineer"
-      }
-    ],
-    "Rishon LeZion": [
-      {
-        "id": "401",
-        "name": "Shira Hershkovitz",
-        "party": "Equality Now Party",
-        "background": "Healthcare worker and union leader"
-      },
-      {
-        "id": "402",
-        "name": "Nadav Eyal",
-        "party": "Innovation Party",
-        "background": "Tech entrepreneur"
-      },
-      {
-        "id": "403",
-        "name": "Tamar Zandberg",
-        "party": "Green City Party",
-        "background": "Environmental scientist and advocate"
-      },
-      {
-        "id": "404",
-        "name": "Michael Biton",
-        "party": "Future Forward Party",
-        "background": "Economist and author"
-      }
-    ],
-    "Petah Tikva": [
-      {
-        "id": "501",
-        "name": "Yossi Cohen",
-        "party": "Urban Development Party",
-        "background": "Architect and city planner"
-      },
-      {
-        "id": "502",
-        "name": "Galit Distel Atbaryan",
-        "party": "Peace & Progress Party",
-        "background": "Lawyer and civil rights activist"
-      },
-      {
-        "id": "503",
-        "name": "Micky Rosenthal",
-        "party": "Unity Party",
-        "background": "Journalist and documentary filmmaker"
-      }
-    ],
-    "Ashdod": [
-      {
-        "id": "601",
-        "name": "Yifat Shasha-Biton",
-        "party": "Labor Party",
-        "background": "Educator and community leader"
-      },
-      {
-        "id": "602",
-        "name": "Orna Barbivai",
-        "party": "Future Forward Party",
-        "background": "Retired military officer and public speaker"
-      },
-      {
-        "id": "603",
-        "name": "Eitan Ginzburg",
-        "party": "Equality Now Party",
-        "background": "LGBTQ+ advocate and non-profit organizer"
-      },
-      {
-        "id": "604",
-        "name": "Stav Shaffir",
-        "party": "Green City Party",
-        "background": "Economist and environmentalist"
-      }
-    ]
-  },
-  "voters": {
-    "Jerusalem": [
-      {
-        "id": "12345",
-        "name": "Eli Takele",
-        "city": "Jerusalem",
-        "preferredCandidate": "David Cohen"
-      },
-      {
-        "id": "v1002",
-        "name": "Sara Malka",
-        "city": "Jerusalem",
-        "preferredCandidate": "Rachel Meir"
-      },
-      {
-        "id": "v1003",
-        "name": "Amir Ben-Yosef",
-        "city": "Jerusalem",
-        "preferredCandidate": "Rachel Meir"
-      }
-    ],
-    "Tel Aviv": [
-      {
-        "id": "v2001",
-        "name": "Yonatan Peretz",
-        "city": "Jerusalem",
-        "preferredCandidate": "Nava Shapira"
-      },
-      {
-        "id": "v2002",
-        "name": "Dana Barak",
-        "city": "Jerusalem",
-        "preferredCandidate": "Nava Shapira"
-      },
-      {
-        "id": "v2003",
-        "name": "Oded Shahar",
-        "city": "Jerusalem",
-        "preferredCandidate": "Omer Goldman"
-      }
-    ],
-    "Haifa": [
-      {
-        "id": "v3001",
-        "name": "Miriam Tzur",
-        "city": "Jerusalem",
-        "preferredCandidate": "Moshe Dayan"
-      },
-      {
-        "id": "v3002",
-        "name": "Nadav Rosen",
-        "city": "Jerusalem",
-        "preferredCandidate": "Yael Abecassis"
-      },
-      {
-        "id": "v3003",
-        "name": "Liora Shmueli",
-        "city": "Jerusalem",
-        "preferredCandidate": "Yael Abecassis"
-      }
-    ],
-    "Rishon LeZion": [
-      {
-        "id": "v4001",
-        "name": "Amitai Mordechai",
-        "city": "Jerusalem",
-        "preferredCandidate": "Daniel Rothman"
-      },
-      {
-        "id": "v4002",
-        "name": "Talia Regev",
-        "city": "Jerusalem",
-        "preferredCandidate": "Orna Datz"
-      },
-      {
-        "id": "v4003",
-        "name": "Reut Aharoni",
-        "city": "Jerusalem",
-        "preferredCandidate": "Orna Datz"
-      }
-    ],
-    "Petah Tikva": [
-      {
-        "id": "v5001",
-        "name": "Ronen Shmuel",
-        "city": "Jerusalem",
-        "preferredCandidate": "Hadas Malka"
-      },
-      {
-        "id": "v5002",
-        "name": "Dorit Feldman",
-        "city": "Jerusalem",
-        "preferredCandidate": "Amir Peretz"
-      },
-      {
-        "id": "v5003",
-        "name": "Eliad Cohen",
-        "city": "Jerusalem",
-        "preferredCandidate": "Amir Peretz"
-      }
-    ],
-    "Ashdod": [
-      {
-        "id": "v6001",
-        "name": "Miri Bohadana",
-        "city": "Jerusalem",
-        "preferredCandidate": "Eyal Golan"
-      },
-      {
-        "id": "v6002",
-        "name": "Idan Yaniv",
-        "city": "Jerusalem",
-        "preferredCandidate": "Eden Hason"
-      },
-      {
-        "id": "v6003",
-        "name": "Yael Abulafia",
-        "city": "Jerusalem",
-        "preferredCandidate": "Eyal Golan"
-      }
-    ]
-  }
+  "candidates": [
+    {
+      "id": "101",
+      "name": "Eli Cohen",
+      "party": "Unity Party",
+      "background": "Former city council member",
+      "cityId": "jerusalem_id"
+    },
+    {
+      "id": "102",
+      "name": "Miri Regev",
+      "party": "Peace & Progress Party",
+      "background": "Activist and community organizer",
+      "cityId": "jerusalem_id"
+    },
+    {
+      "id": "103",
+      "name": "David Levy",
+      "party": "Future Forward Party",
+      "background": "Business owner and philanthropist",
+      "cityId": "jerusalem_id"
+    },
+    {
+      "id": "201",
+      "name": "Yael Dayan",
+      "party": "Green City Party",
+      "background": "Environmental activist",
+      "cityId": "telAviv_id"
+    },
+    {
+      "id": "202",
+      "name": "Ofer Berkovich",
+      "party": "Urban Renewal Party",
+      "background": "Real estate developer",
+      "cityId": "telAviv_id"
+    },
+    {
+      "id": "203",
+      "name": "Hila Vazan",
+      "party": "Unity Party",
+      "background": "Lawyer and human rights advocate",
+      "cityId": "telAviv_id"
+    },
+    {
+      "id": "204",
+      "name": "Noam Shalit",
+      "party": "People's Party",
+      "background": "Journalist and author",
+      "cityId": "telAviv_id"
+    },
+    {
+      "id": "301",
+      "name": "Ruth Wasserman Lande",
+      "party": "Labor Party",
+      "background": "Former diplomat and educator",
+      "cityId": "haifa_id"
+    },
+    {
+      "id": "302",
+      "name": "Shlomo Lahiani",
+      "party": "Future Forward Party",
+      "background": "Entrepreneur and business consultant",
+      "cityId": "haifa_id"
+    },
+    {
+      "id": "303",
+      "name": "Nitzan Horowitz",
+      "party": "Green City Party",
+      "background": "Environmental engineer",
+      "cityId": "haifa_id"
+    },
+    {
+      "id": "401",
+      "name": "Shira Hershkovitz",
+      "party": "Equality Now Party",
+      "background": "Healthcare worker and union leader",
+      "cityId": "rishonLeZion_id"
+    },
+    {
+      "id": "402",
+      "name": "Nadav Eyal",
+      "party": "Innovation Party",
+      "background": "Tech entrepreneur",
+      "cityId": "rishonLeZion_id"
+    },
+    {
+      "id": "403",
+      "name": "Tamar Zandberg",
+      "party": "Green City Party",
+      "background": "Environmental scientist and advocate",
+      "cityId": "rishonLeZion_id"
+    },
+    {
+      "id": "404",
+      "name": "Michael Biton",
+      "party": "Future Forward Party",
+      "background": "Economist and author",
+      "cityId": "rishonLeZion_id"
+    },
+    {
+      "id": "501",
+      "name": "Yossi Cohen",
+      "party": "Urban Development Party",
+      "background": "Architect and city planner",
+      "cityId": "petahTikva_id"
+    },
+    {
+      "id": "502",
+      "name": "Galit Distel Atbaryan",
+      "party": "Peace & Progress Party",
+      "background": "Lawyer and civil rights activist",
+      "cityId": "petahTikva_id"
+    },
+    {
+      "id": "503",
+      "name": "Micky Rosenthal",
+      "party": "Unity Party",
+      "background": "Journalist and documentary filmmaker",
+      "cityId": "petahTikva_id"
+    },
+    {
+      "id": "601",
+      "name": "Yifat Shasha-Biton",
+      "party": "Labor Party",
+      "background": "Educator and community leader",
+      "cityId": "ashdod_id"
+    },
+    {
+      "id": "602",
+      "name": "Orna Barbivai",
+      "party": "Future Forward Party",
+      "background": "Retired military officer and public speaker",
+      "cityId": "ashdod_id"
+    },
+    {
+      "id": "603",
+      "name": "Eitan Ginzburg",
+      "party": "Equality Now Party",
+      "background": "LGBTQ+ advocate and non-profit organizer",
+      "cityId": "ashdod_id"
+    },
+    {
+      "id": "604",
+      "name": "Stav Shaffir",
+      "party": "Green City Party",
+      "background": "Economist and environmentalist",
+      "cityId": "ashdod_id"
+    }
+  ],
+
+  "citizens": [
+    {
+      "id": "12345",
+      "name": "Eli Takele",
+      "city": "Jerusalem",
+      "cityId": "jerusalem_id",
+      "preferredCandidate": "David Cohen"
+    },
+    {
+      "id": "v1001",
+      "name": "Eli David",
+      "city": "Jerusalem",
+      "cityId": "jerusalem_id",
+      "preferredCandidate": "David Cohen"
+    },
+    {
+      "id": "v1002",
+      "name": "Sara Malka",
+      "city": "Jerusalem",
+      "cityId": "jerusalem_id",
+      "preferredCandidate": "Rachel Meir"
+    },
+    {
+      "id": "v1003",
+      "name": "Amir Ben-Yosef",
+      "city": "Jerusalem",
+      "preferredCandidate": "Rachel Meir"
+    },
+    {
+      "id": "v2001",
+      "name": "Yonatan Peretz",
+      "city": "Tel Aviv",
+      "cityId": "telAviv_id",
+
+      "preferredCandidate": "Nava Shapira"
+    },
+    {
+      "id": "v2002",
+      "name": "Dana Barak",
+      "city": "Tel Aviv",
+      "cityId": "telAviv_id",
+
+      "preferredCandidate": "Nava Shapira"
+    },
+    {
+      "id": "v2003",
+      "name": "Oded Shahar",
+      "city": "Tel Aviv",
+      "cityId": "telAviv_id",
+
+      "preferredCandidate": "Omer Goldman"
+    },
+    {
+      "id": "v3001",
+      "name": "Miriam Tzur",
+      "city": "Haifa",
+      "cityId": "haifa_id",
+      "preferredCandidate": "Moshe Dayan"
+    },
+    {
+      "id": "v3002",
+      "name": "Nadav Rosen",
+      "city": "Haifa",
+      "cityId": "haifa_id",
+      "preferredCandidate": "Yael Abecassis"
+    },
+    {
+      "id": "v3003",
+      "name": "Liora Shmueli",
+      "city": "Haifa",
+      "cityId": "haifa_id",
+      "preferredCandidate": "Yael Abecassis"
+    },
+    {
+      "id": "v4001",
+      "name": "Amitai Mordechai",
+      "city": "Rishon LeZion",
+      "cityId": "rishonLeZion_id",
+      "preferredCandidate": "Daniel Rothman"
+    },
+    {
+      "id": "v4002",
+      "name": "Talia Regev",
+      "city": "Rishon LeZion",
+      "cityId": "rishonLeZion_id",
+      "preferredCandidate": "Orna Datz"
+    },
+    {
+      "id": "v4003",
+      "name": "Reut Aharoni",
+      "city": "Rishon LeZion",
+      "cityId": "rishonLeZion_id",
+      "preferredCandidate": "Orna Datz"
+    },
+    {
+      "id": "v5001",
+      "name": "Ronen Shmuel",
+      "city": "Petah Tikva",
+      "cityId": "petahTikva_id",
+      "preferredCandidate": "Hadas Malka"
+    },
+    {
+      "id": "v5002",
+      "name": "Dorit Feldman",
+      "city": "Petah Tikva",
+      "cityId": "petahTikva_id",
+      "preferredCandidate": "Amir Peretz"
+    },
+    {
+      "id": "v5003",
+      "name": "Eliad Cohen",
+      "city": "Petah Tikva",
+      "cityId": "petahTikva_id",
+      "preferredCandidate": "Amir Peretz"
+    },
+    {
+      "id": "v6001",
+      "name": "Miri Bohadana",
+      "city": "Ashdod",
+      "cityId": "ashdod_id",
+      "preferredCandidate": "Eyal Golan"
+    },
+    {
+      "id": "v6002",
+      "name": "Idan Yaniv",
+      "city": "Ashdod",
+      "cityId": "ashdod_id",
+      "preferredCandidate": "Eden Hason"
+    },
+    {
+      "id": "v6003",
+      "name": "Yael Abulafia",
+      "city": "Ashdod",
+      "cityId": "ashdod_id",
+      "preferredCandidate": "Eyal Golan"
+    }
+  ]
 }

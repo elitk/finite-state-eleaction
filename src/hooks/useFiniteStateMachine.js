@@ -1,22 +1,45 @@
 import { useState, useEffect } from 'react';
-import FiniteStateMachine from "@elitk/finite-state-machine"
+import FiniteStateMachine from '@elitk/finite-state-machine';
+import {
+  ELECTION_STATES,
+  ELECTION_TRANSITIONS,
+} from '../utils/electionConstants';
 
-function useFiniteStateMachine(initialState, transitions) {
-  const fsm = new FiniteStateMachine(initialState, transitions);
-  const [state, setState] = useState(initialState);
+const fsm = new FiniteStateMachine(
+  ELECTION_STATES.NOT_LOGGED_IN,
+  ELECTION_TRANSITIONS
+);
+
+function useFiniteStateMachine() {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const [isUserVoted, setIsUserVoted] = useState(false);
 
   useEffect(() => {
     const listener = (newState, action) => {
       console.log(`Transitioned to ${newState} due to action ${action}`);
-      setState(newState);
     };
     fsm.addEventListener(listener);
-  }, [fsm]);
+  }, []);
+
   function dispatch(action) {
-    const newState = fsm.transition(action);
-    setState(newState);
+    switch (action) {
+      case 'LOGIN':
+        setIsUserLoggedIn(true);
+        break;
+      case 'VOTE':
+        setIsUserVoted(true);
+        break;
+      case 'LOGOUT':
+        setIsUserLoggedIn(false);
+        break;
+      default:
+        break;
+    }
+
+    fsm.transition(action);
   }
-  return [state, dispatch];
+
+  return { dispatch, isUserLoggedIn, isUserVoted };
 }
 
 export default useFiniteStateMachine;

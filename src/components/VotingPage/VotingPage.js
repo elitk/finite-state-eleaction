@@ -1,47 +1,55 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-import useFiniteStateMachine from '../../hooks/useFiniteStateMachine';
 import MainTitle from '../UI/MainTitle/MainTitle';
 import Button from '../UI/Button/Button';
 import Modal from '../UI/Modal/Modal';
 
+
 import mockData from '../../utils/mockData.json';
-import {
-  ELECTION_STATES,
-  ELECTION_TRANSITIONS,
-} from '../../utils/electionConstants'; 
+import { useStateContext } from '../../context/StateContext';
 import { setLocalStorageItem } from '../../utils/localStorage';
 
-import './VotingPage.css'; 
+import './VotingPage.css';
 
 const candidates = mockData.candidates;
+const cities = mockData.cities;
 
 function VotingPage() {
-  const [state, dispatch] = useFiniteStateMachine(
-    ELECTION_STATES.LOGGED_IN,
-    ELECTION_TRANSITIONS
-  );
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { id, name } = location.state.user;
-  const city = location.state.city;
-  const [selectedCandidate, setSelectedCandidate] = useState(
-    candidates[city][0].name
-  );
-  const [hasVoted, setHasVoted] = useState(false); 
+  const [hasVoted, setHasVoted] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [selectedCandidate, setSelectedCandidate] = useState('');
+  const { dispatch, isUserLoggedIn } = useStateContext();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  if (!location.state || !isUserLoggedIn) {
+    navigate('/');
+  }
+  const { id, name, cityId } = location.state.citizen;
+
+  const city = cities.find(({ id }) => id === cityId);
+  console.log({ location, cityId, city });
+  const cityCandidates = candidates.filter(
+    (candidate) => candidate.cityId === cityId
+  );
+  console.log(cityCandidates);
 
   const handleVote = () => {
     if (!selectedCandidate) {
-      alert('Please select candidate');
+      toast.error(`Please select candidate`, {
+        position: toast.POSITION.TOP_LEFT,
+      });
       return;
     }
     setShowModal(true);
   };
+
   const handleConfirmVote = () => {
+    // simulatation to db save
     setLocalStorageItem(id, selectedCandidate);
-    setShowModal(false);
+    closeModal();
     setHasVoted(true);
     dispatch('VOTE');
     setTimeout(() => {
@@ -49,29 +57,32 @@ function VotingPage() {
     }, 2000);
   };
 
-  const footerContent = (
-    <>
-      <Button onClick={() => setShowModal(false)}>Cancel</Button>
-      <Button onClick={() => handleConfirmVote()}>Confirm Vote</Button>
-    </>
-  );
+  const closeModal = () => setShowModal(false);
+
   return (
     <div className="vote-container">
-      <MainTitle text={` Hello ${name} welcome to the election of ${city}`} />
+      <MainTitle
+        text={`Hello ${name} welcome to the election of ${city.name}`}
+      />
       <h3>Please select your candidate</h3>
       <select onChange={(e) => setSelectedCandidate(e.target.value)}>
-        {candidates[city].map((candidate) => (
+        <option>please select</option>
+        {cityCandidates.map((candidate) => (
           <option key={candidate.id} value={candidate.name}>
             {candidate.name}
           </option>
         ))}
       </select>
       <Button onClick={() => handleVote()}>Vote</Button>
+
       <Modal
         show={showModal}
-        onClose={() => setShowModal(false)}
         title="Confirm Vote"
-        footerContent={footerContent}
+        primaryActionLabel="Confirm"
+        secendoryActionLabel="Cancel"
+        onPrimaryActionClick={handleConfirmVote}
+        onSeconderyActionClick={closeModal}
+        onClose={closeModal}
       >
         <p>You voted for: {selectedCandidate}</p>
       </Modal>
