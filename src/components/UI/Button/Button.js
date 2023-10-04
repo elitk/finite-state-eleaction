@@ -9,7 +9,7 @@ const Button = ({
   children,
   ...props
 }) => (
-  <button className={`custom-btn ${className}`} onClick={onClick} {...props}>
+  <button data-testid="button-id" className={`custom-btn ${className}`} onClick={onClick} {...props}>
     {children}
   </button>
 );
