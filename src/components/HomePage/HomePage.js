@@ -42,6 +42,7 @@ function HomePage() {
       <MainTitle text="Welcome to City Authority Elections!" />
       <input
         type="text"
+        data-testid="input-id"
         placeholder="ID"
         value={selcetedId}
         onChange={(e) => setSelcetedIdId(e.target.value)}
