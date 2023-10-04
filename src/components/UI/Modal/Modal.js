@@ -7,6 +7,8 @@ const Modal = ({
   onClose,
   title,
   children,
+  primaryActionClassName,
+  secendoryActionClassName,
   primaryActionLabel,
   secendoryActionLabel,
   onPrimaryActionClick,
@@ -21,16 +23,24 @@ const Modal = ({
       <div className="modal">
         <div className="modal-header">
           <h5 className="modal-title">{title}</h5>
-          <button className="close-button" onClick={onClose}>
+          <div className="close-icon" onClick={onClose}>
             &times;
-          </button>
+          </div>
         </div>
         <div className="modal-body">{children}</div>
         <div className="modal-footer">
-          <Button onClick={onSeconderyActionClick}>
+          <Button
+            className={secendoryActionClassName}
+            onClick={onSeconderyActionClick}
+          >
             {secendoryActionLabel}
           </Button>
-          <Button onClick={onPrimaryActionClick}>{primaryActionLabel}</Button>
+          <Button
+            className={primaryActionClassName}
+            onClick={onPrimaryActionClick}
+          >
+            {primaryActionLabel}
+          </Button>
         </div>
       </div>
     </div>

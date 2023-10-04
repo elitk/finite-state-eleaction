@@ -4,13 +4,14 @@ import MainTitle from '../UI/MainTitle/MainTitle';
 
 import './ConfirmationPage.css';
 import { useStateContext } from '../../context/StateContext';
+import { ELECTION_ACTIONS } from '../../utils/electionConstants';
 
 function ConfirmationPage() {
- const { dispatch } = useStateContext();
+  const { finiteStateMachine } = useStateContext();
   const navigate = useNavigate();
 
   setTimeout(() => {
-    dispatch('LOGOUT');
+    finiteStateMachine.transition(ELECTION_ACTIONS.LOGOUT);
     navigate('/');
   }, 3000);
 

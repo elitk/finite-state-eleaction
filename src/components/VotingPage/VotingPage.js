@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -6,10 +6,13 @@ import MainTitle from '../UI/MainTitle/MainTitle';
 import Button from '../UI/Button/Button';
 import Modal from '../UI/Modal/Modal';
 
-
 import mockData from '../../utils/mockData.json';
 import { useStateContext } from '../../context/StateContext';
 import { setLocalStorageItem } from '../../utils/localStorage';
+import {
+  ELECTION_ACTIONS,
+  ELECTION_STATES,
+} from '../../utils/electionConstants';
 
 import './VotingPage.css';
 
@@ -20,21 +23,22 @@ function VotingPage() {
   const [hasVoted, setHasVoted] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState('');
-  const { dispatch, isUserLoggedIn } = useStateContext();
+  const { finiteStateMachine } = useStateContext();
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (!location.state || !isUserLoggedIn) {
+  if (
+    !location.state ||
+    finiteStateMachine.state === ELECTION_STATES.NOT_LOGGED_IN
+  ) {
     navigate('/');
   }
   const { id, name, cityId } = location.state.citizen;
 
   const city = cities.find(({ id }) => id === cityId);
-  console.log({ location, cityId, city });
   const cityCandidates = candidates.filter(
     (candidate) => candidate.cityId === cityId
   );
-  console.log(cityCandidates);
 
   const handleVote = () => {
     if (!selectedCandidate) {
@@ -51,7 +55,7 @@ function VotingPage() {
     setLocalStorageItem(id, selectedCandidate);
     closeModal();
     setHasVoted(true);
-    dispatch('VOTE');
+    finiteStateMachine.transition(ELECTION_ACTIONS.VOTE);
     setTimeout(() => {
       navigate('/confirm');
     }, 2000);
@@ -79,7 +83,9 @@ function VotingPage() {
         show={showModal}
         title="Confirm Vote"
         primaryActionLabel="Confirm"
+        primaryActionClassName="success"
         secendoryActionLabel="Cancel"
+        secendoryActionClassName="error"
         onPrimaryActionClick={handleConfirmVote}
         onSeconderyActionClick={closeModal}
         onClose={closeModal}

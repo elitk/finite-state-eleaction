@@ -10,12 +10,12 @@ import { getLocalStorageItem } from '../../utils/localStorage';
 
 import './HomePage.css';
 import 'react-toastify/dist/ReactToastify.css';
+import { ELECTION_ACTIONS } from '../../utils/electionConstants';
 
 const citizens = mockData.citizens;
 
 function HomePage() {
-  const state = useStateContext();
-
+  const { finiteStateMachine } = useStateContext();
   const [selcetedId, setSelcetedIdId] = useState('');
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ function HomePage() {
       return;
     }
 
-    state.dispatch('LOGIN');
+    finiteStateMachine.transition(ELECTION_ACTIONS.LOGIN);
     navigate('/vote', { state: { citizen } });
   };
   return (

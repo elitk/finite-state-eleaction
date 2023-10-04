@@ -5,6 +5,7 @@
   border-radius: 4px;
   background-color: #007bff;
   color: white;
+  font-weight: 600;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -13,4 +14,18 @@
 
 .custom-btn:hover {
   background-color: #0056b3;
+}
+.custom-btn.error {
+  background-color: #f44436;
+
+}
+.custom-btn.error:hover {
+  background-color: #b6190e;
+
+}
+.custom-btn.success {
+  background-color: #66bb6a;
+}
+.custom-btn.success:hover {
+  background-color: #129218;
 }

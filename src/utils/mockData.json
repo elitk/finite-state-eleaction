@@ -220,6 +220,7 @@
       "id": "v1003",
       "name": "Amir Ben-Yosef",
       "city": "Jerusalem",
+      "cityId": "jerusalem_id",
       "preferredCandidate": "Rachel Meir"
     },
     {
@@ -227,7 +228,6 @@
       "name": "Yonatan Peretz",
       "city": "Tel Aviv",
       "cityId": "telAviv_id",
-
       "preferredCandidate": "Nava Shapira"
     },
     {
@@ -235,7 +235,6 @@
       "name": "Dana Barak",
       "city": "Tel Aviv",
       "cityId": "telAviv_id",
-
       "preferredCandidate": "Nava Shapira"
     },
     {
@@ -243,7 +242,6 @@
       "name": "Oded Shahar",
       "city": "Tel Aviv",
       "cityId": "telAviv_id",
-
       "preferredCandidate": "Omer Goldman"
     },
     {
