@@ -20,9 +20,9 @@ const Modal = ({
 
   return (
     <div className="modal-overlay">
-      <div className="modal">
+      <div className="modal" data-testid="modal-id">
         <div className="modal-header">
-          <h5 className="modal-title">{title}</h5>
+          <h5 className="modal-title" data-testid='modal-title-id'>{title}</h5>
           <div className="close-icon" onClick={onClose}>
             &times;
           </div>
