@@ -9,12 +9,10 @@ import Modal from '../UI/Modal/Modal';
 import mockData from '../../utils/mockData.json';
 import { useStateContext } from '../../context/StateContext';
 import { setLocalStorageItem } from '../../utils/localStorage';
-import {
-  ELECTION_ACTIONS,
-  ELECTION_STATES,
-} from '../../utils/electionConstants';
+import { ELECTION_ACTIONS } from '../../utils/electionConstants';
 
 import './VotingPage.css';
+import withAuth from '../AuthComponent';
 
 const candidates = mockData.candidates;
 const cities = mockData.cities;
@@ -27,12 +25,6 @@ function VotingPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (
-    !location.state ||
-    finiteStateMachine.state === ELECTION_STATES.NOT_LOGGED_IN
-  ) {
-    navigate('/');
-  }
   const { id, name, cityId } = location.state.citizen;
 
   const city = cities.find(({ id }) => id === cityId);
@@ -77,7 +69,13 @@ function VotingPage() {
           </option>
         ))}
       </select>
-      <Button onClick={() => handleVote()}>Vote</Button>
+      <Button
+        className={hasVoted ? 'error' : ''}
+        disabled={hasVoted}
+        onClick={() => handleVote()}
+      >
+        Vote
+      </Button>
 
       <Modal
         show={showModal}
@@ -100,4 +98,4 @@ function VotingPage() {
   );
 }
 
-export default VotingPage;
+export default withAuth(VotingPage);

@@ -5,6 +5,7 @@ import MainTitle from '../UI/MainTitle/MainTitle';
 import './ConfirmationPage.css';
 import { useStateContext } from '../../context/StateContext';
 import { ELECTION_ACTIONS } from '../../utils/electionConstants';
+import withAuth from '../AuthComponent';
 
 function ConfirmationPage() {
   const { finiteStateMachine } = useStateContext();
@@ -23,4 +24,4 @@ function ConfirmationPage() {
   );
 }
 
-export default ConfirmationPage;
+export default withAuth(ConfirmationPage);
